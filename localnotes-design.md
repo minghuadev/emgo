@@ -1,7 +1,7 @@
 
-https://github.com/ziutek/emgo/issues/14
- ziutek commented on Jun 20, 2018 
+# https://github.com/ziutek/emgo/issues/14
 
+### ziutek commented on Jun 20, 2018 
 
 This project evolved from proof of concept Go to C translator.
 
@@ -47,24 +47,25 @@ See also issue #13
 
 
 
-https://github.com/ziutek/emgo/issues/13
- maxekman commented on Jun 17, 2018
+# https://github.com/ziutek/emgo/issues/13
+
+### maxekman commented on Jun 17, 2018
 
 Are there any plans for generating board/arch definitions using SVD files? The Rust embedded effort uses a tool called svd2rust to generate type safe memory mappings (I’m not familiar with all the details in Rust as I’m a Go developer).
 
- ziutek commented on Jun 18, 2018
+### ziutek commented on Jun 18, 2018
 
 I don't know anything about SVD. Quick check in Google and I known that there is something like CMSIS-SVD and It looks interesting.
 
 Currently packages in stm32/hal/raw are automatically generated from ST Cube MX C header files but it isn't a perfect solution.
 
- maxekman commented on Jun 19, 2018
+### maxekman commented on Jun 19, 2018
 
 Yes, CMSIS-SVD is the format they are parsing, apart from that I don't know much about it.
 
 If I get some time to experiment with it and start on a parser I'll let you know.
 
- ziutek commented on Jun 20, 2018
+### ziutek commented on Jun 20, 2018
 
 Currently Emgo has something called xgen.
 
@@ -170,8 +171,9 @@ I was just reading an issue on embedded Rust regarding how they plan to handle b
 
 
 
-https://github.com/ziutek/emgo/issues/15
- wumingyu12 commented on Jun 24, 2018
+# https://github.com/ziutek/emgo/issues/15
+
+### wumingyu12 commented on Jun 24, 2018
 
 hello，first it is a wonderful project，i has hate to use c to write Embedded program。
 
@@ -179,7 +181,7 @@ i find you use xgen to create sdk .go file by register config .go file。
 now i want to add something in register config .go file
 how can i use xgen to update sdk .go file like xgen_ficr.go
 
- ziutek commented on Jun 25, 2018
+### ziutek commented on Jun 25, 2018
 
 Simly run:
 
@@ -191,7 +193,7 @@ It regenerates xgen_ficr.go.
 
 For STM32 see issue #13
 
- ziutek commented on Jun 25, 2018
+### ziutek commented on Jun 25, 2018
 
 There is one unobvious thing.
 
