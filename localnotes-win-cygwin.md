@@ -10,7 +10,7 @@
 
 **Place emgo in a working direcotry**
 
-Create a top-level directory somewhere under the cygwin '/home/...' and cd into the directory. All further commands will be issued from this directory. 
+Create a top-level directory somewhere under the cygwin '/home/...' and cd into the directory. All further env-setting commands will be issued from this directory. 
 
 Create a directory at 'libs/src/github.com/ziutek/' and checkout the emgo repo under it. 
 
