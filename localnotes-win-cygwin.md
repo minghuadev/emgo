@@ -4,19 +4,19 @@
 
 ## Install packages
 
-** Install the Golang Windows SDK **
+**Install the Golang Windows SDK**
 
-** Install Cygwin **
+**Install Cygwin**
 
-** Place emgo in a working direcotry **
+**Place emgo in a working direcotry**
 
 Create a top-level directory somewhere under the cygwin '/home/...' and cd into the directory. All further commands will be issued from this directory. 
 
 Create a directory at 'libs/src/github.com/ziutek/' and checkout the emgo repo under it. 
 
-** Install the 'gnu-none-eabi' toolchain **
+**Install the 'gnu-none-eabi' toolchain**
 
-Refer to the examples building section below. 
+Refer to the examples building section below, download and install a pre-built toolchain. 
 
 
 ## Cygwin Environment Setup for Building egc
@@ -49,7 +49,7 @@ Then as usual, cd into the emgo egc directory and issue the 'go install' command
 
 ## Cygwin Environment Setup for building emgo stm32 examples
 
-Source this file so as to be able to build emgo examples: 
+After sourcing the above 'envset-cygwin-compile-emgo' file, source this file so as to be able to build emgo examples using the just built egc command: 
 
 ```
 $ cat envset-cygwin-toolchain
