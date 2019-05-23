@@ -3,6 +3,7 @@
 
 * Debug Change to Print Running Sequence
 * Running Sequence for stm32/examples/f4-discovery/helloworld
+* Fix Linker Line Too Long Error for Blinky
 
 # Debug Change to Print Running Sequence
 
@@ -119,3 +120,38 @@ pkg end   28 26 runtime/noos
 pkg end   28 27 runtime
 pkg end   28 28 stm32/examples/f4-discovery/helloworld
 ```
+
+The size of memory is about 27k bytes.
+
+# Fix Linker Line Too Long Error for Blinky
+
+```
+diff --git a/egc/buildtools.go b/egc/buildtools.go
+index 4fc79f1a..6d0fbb07
+--- a/egc/buildtools.go
++++ b/egc/buildtools.go
+@@ -240,6 +240,20 @@ func (bt *BuildTools) Link(e string, imports []string, o ...string) error {
+        if err != nil {
+                return err
+        }
++       // eliminate duplicate elements.
++       a = func(b []string) ([]string) {
++               rv := make([]string, 0)
++               regm := make(map[string]int)
++               for _,x := range b {
++                       if _,ok := regm[x]; !ok {
++                               rv = append(rv, x)
++                               regm[x] = 1
++                       }
++               }
++               return rv
++       }(a)
++       // then supply the list twice for linker to find earlier dependants
++       args = append(args, a...)
+        args = append(args, a...)
+
+        if bt.LDlibgcc != "" {
+
+```
+
+Blinky uses about 11k memory. 
