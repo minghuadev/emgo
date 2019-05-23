@@ -2,7 +2,7 @@
 # TOC
 
 * Debug Change to Print Running Sequence
-* Running Sequence for stm32/examples/f4-explorer/helloworld
+* Running Sequence for stm32/examples/f4-discovery/helloworld
 
 # Debug Change to Print Running Sequence
 
@@ -59,7 +59,7 @@ index 5c2c6b28..454fdb31
 
 ```
 
-# Running Sequence for stm32/examples/f4-explorer/helloworld
+# Running Sequence for stm32/examples/f4-discovery/helloworld
 
 ```
 pkg start 1     stm32/examples/f4-discovery/helloworld
